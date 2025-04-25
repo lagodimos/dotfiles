@@ -1,5 +1,3 @@
-# ln -s ~/git/dotfiles/.bashrc ~/.bashrc
-
 NO_COLOR="\[\033[0m\]"
 
 BLACK="\[\033[0;30m\]"
@@ -56,6 +54,14 @@ alias l='ls -CF'
 alias grep='grep --color=auto'
 
 alias mx='chmod a+x'
+
+# uutils
+uu_binaries=$(compgen -c | grep '^uu-')
+for binary in $uu_binaries; do
+    command="${binary#uu-}"
+    alias $command=$binary
+done
+unalias [ # workaround: dont use uu-[, breaks git add completions
 
 up ()   # Goes up a specified number of directories  (i.e. up 4)
 {
