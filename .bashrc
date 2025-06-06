@@ -107,6 +107,10 @@ hh () {     # History Search
     unset command
 }
 
+bkg () {
+    nohup $@ > /dev/null 2>&1 &
+}
+
 governor () {
     $ESCALATION_TOOL cpupower frequency-set -g $1
 }
