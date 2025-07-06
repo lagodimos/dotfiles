@@ -1,3 +1,6 @@
+rm -f /home/$USER/.profile
+ln -s /home/$USER/git/dotfiles/.profile /home/$USER/.profile
+
 # Bash
 rm -f /home/$USER/.bashrc
 ln -s /home/$USER/git/dotfiles/.bashrc /home/$USER/.bashrc

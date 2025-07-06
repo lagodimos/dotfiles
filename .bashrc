@@ -1,24 +1,8 @@
-NO_COLOR="\[\033[0m\]"
+#!/bin/bash
 
-BLACK="\[\033[0;30m\]"
-RED="\[\033[0;31m\]"
-GREEN="\[\033[0;32m\]"
-YELLOW="\[\033[0;33m\]"
-BLUE="\[\033[0;34m\]"
-MAGENTA="\[\033[0;35m\]"
-CYAN="\[\033[0;36m\]"
-WHITE="\[\033[0;37m\]"
-
-BOLD_BLACK="\[\033[1;30m\]"
-BOLD_RED="\[\033[1;31m\]"
-BOLD_GREEN="\[\033[1;32m\]"
-BOLD_YELLOW="\[\033[1;33m\]"
-BOLD_BLUE="\[\033[1;34m\]"
-BOLD_MAGENTA="\[\033[1;35m\]"
-BOLD_CYAN="\[\033[1;36m\]"
-BOLD_WHITE="\[\033[1;37m\]"
-
-PS1="$BOLD_GREEN\u@\h$NO_COLOR:$BOLD_CYAN\w$NO_COLOR\$ "
+if [ -f /home/$USER/.profile ]; then
+    source /home/$USER/.profile
+fi
 
 export HISTSIZE=20000
 export HISTFILESIZE=20000
@@ -26,12 +10,7 @@ export HISTCONTROL=ignoreboth
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 shopt -s histappend
 
-export VISUAL=nano
-export EDITOR="$VISUAL"
-
-ESCALATION_TOOL="run0 --background="
-
-bind 'set bell-style none'
+shopt -s autocd
 
 if ! shopt -oq posix; then
     if [ -f /usr/share/bash-completion/bash_completion ]; then
@@ -41,10 +20,12 @@ if ! shopt -oq posix; then
     fi
 fi
 
+# Prompt
+PS1="\[\033[1;32m\]\u@\h\[\033[0m\]:\[\033[1;36m\]\w\[\033[0m\]\$ "
+
 # Aliases
 
 alias pd='cd "$OLDPWD"'
-alias hm='cd ~'
 
 alias ls='ls --color=auto'
 alias ll='ls -l'
