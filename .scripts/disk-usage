@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+lsblk -o NAME,FSTYPE,FSUSED,SIZE,FSUSE%,MOUNTPOINTS
