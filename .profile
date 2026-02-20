@@ -5,10 +5,10 @@
 export VISUAL="nano"
 export EDITOR="$VISUAL"
 export ESCALATION_TOOL="sudo"
-export TERMINAL="flatpak run app.devsuite.Ptyxis"
-export GUI_EDITOR="flatpak run dev.zed.Zed"
-export FILE_MANAGER="flatpak run org.kde.dolphin"
-export BROWSER="flatpak run org.mozilla.firefox"
+export TERMINAL="app.devsuite.Ptyxis"
+export GUI_EDITOR="dev.zed.Zed"
+export FILE_MANAGER="org.kde.dolphin"
+export BROWSER="org.mozilla.firefox"
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ] ; then
