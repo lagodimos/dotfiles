@@ -18,3 +18,7 @@ fi
 if [ -d "$HOME/.scripts" ] ; then
     export PATH="$HOME/.scripts:$PATH"
 fi
+
+if [[ -d $HOME/.cargo/bin ]]; then
+    PATH="$HOME/.cargo/bin:$PATH"
+fi
