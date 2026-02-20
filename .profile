@@ -14,7 +14,3 @@ export BROWSER="flatpak run org.mozilla.firefox"
 if [ -d "$HOME/.local/bin" ] ; then
     export PATH="$HOME/.local/bin:$PATH"
 fi
-
-if [ "$(tty)" = "/dev/tty1" ] && [ -z "$WAYLAND_DISPLAY" ]; then
-    exec river
-fi
