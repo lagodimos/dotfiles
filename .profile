@@ -7,7 +7,7 @@ export EDITOR="$VISUAL"
 export ESCALATION_TOOL="sudo"
 export TERMINAL="alacritty"
 export GUI_EDITOR="dev.zed.Zed"
-export FILE_MANAGER="org.kde.dolphin"
+export FILE_MANAGER="pcmanfm-qt"
 export BROWSER="org.mozilla.firefox"
 
 # set PATH so it includes user's private bin if it exists
