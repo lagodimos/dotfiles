@@ -5,7 +5,7 @@
 export VISUAL="nano"
 export EDITOR="$VISUAL"
 export ESCALATION_TOOL="sudo"
-export TERMINAL="app.devsuite.Ptyxis"
+export TERMINAL="alacritty"
 export GUI_EDITOR="dev.zed.Zed"
 export FILE_MANAGER="org.kde.dolphin"
 export BROWSER="org.mozilla.firefox"
