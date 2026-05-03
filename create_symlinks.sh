@@ -11,4 +11,4 @@ rm -f $HOME/.config/ashell/config.toml
 ln -s $HOME/git/dotfiles/.config/ashell/config.toml $HOME/.config/ashell/config.toml
 
 rm -f /home/$USER/.var/app/dev.zed.Zed/config/zed/settings.json
-ln -s /home/$USER/git/dotfiles/zed/settings.json /home/$USER/.var/app/dev.zed.Zed/config/zed/settings.json
+ln -s /home/$USER/git/dotfiles/.config/zed/settings.json /home/$USER/.var/app/dev.zed.Zed/config/zed/settings.json
