@@ -1,0 +1,3 @@
+# See the full configuration reference: https://rioterm.com/docs/config
+
+confirm-before-quit = false

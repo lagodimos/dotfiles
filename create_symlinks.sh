@@ -12,3 +12,6 @@ ln -s $HOME/git/dotfiles/.config/ashell/config.toml $HOME/.config/ashell/config.
 
 rm -f /home/$USER/.var/app/dev.zed.Zed/config/zed/settings.json
 ln -s /home/$USER/git/dotfiles/.config/zed/settings.json /home/$USER/.var/app/dev.zed.Zed/config/zed/settings.json
+
+rm -f /home/$USER/.var/app/com.rioterm.Rio/config/rio/config.toml
+ln -s /home/$USER/git/dotfiles/.config/rio/config.toml /home/$USER/.var/app/com.rioterm.Rio/config/rio/config.toml
