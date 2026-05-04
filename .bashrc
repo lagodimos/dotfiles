@@ -7,7 +7,7 @@ fi
 export HISTSIZE=20000
 export HISTFILESIZE=20000
 export HISTCONTROL=ignoreboth
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+export PROMPT_COMMAND="history -a; history -c; history -r${PROMPT_COMMAND:+; $PROMPT_COMMAND}"
 shopt -s histappend
 
 shopt -s autocd
