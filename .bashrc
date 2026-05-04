@@ -4,11 +4,13 @@ if [ -f /home/$USER/.profile ]; then
     source /home/$USER/.profile
 fi
 
-export HISTSIZE=20000
-export HISTFILESIZE=20000
-export HISTCONTROL=ignoreboth
-export PROMPT_COMMAND="history -a; history -c; history -r${PROMPT_COMMAND:+; $PROMPT_COMMAND}"
+HISTSIZE=20000
+HISTFILESIZE=20000
+HISTCONTROL=ignoreboth
+PROMPT_COMMAND="history -a; history -c; history -r${PROMPT_COMMAND:+; $PROMPT_COMMAND}"
 shopt -s histappend
+
+PS1="\[\033[1;32m\]\u@\h\[\033[0m\]:\[\033[1;36m\]\w\[\033[0m\]\$ "
 
 shopt -s autocd
 
@@ -19,9 +21,6 @@ if ! shopt -oq posix; then
         . /etc/bash_completion
     fi
 fi
-
-# Prompt
-PS1="\[\033[1;32m\]\u@\h\[\033[0m\]:\[\033[1;36m\]\w\[\033[0m\]\$ "
 
 # Aliases
 
