@@ -15,10 +15,6 @@ if [ -d "$HOME/.local/bin" ] ; then
     export PATH="$HOME/.local/bin:$PATH"
 fi
 
-if [ -d "$HOME/git/dotfiles/scripts" ] ; then
-    export PATH="$HOME/git/dotfiles/scripts:$PATH"
-fi
-
 if [[ -d $HOME/.cargo/bin ]]; then
     PATH="$HOME/.cargo/bin:$PATH"
 fi
