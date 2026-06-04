@@ -1,0 +1,30 @@
+#!/usr/bin/env sh
+
+update() {
+    echo "Updating ddns..."
+    curl "https://freemyip.com/update?token=$FREEMYIP_TOKEN&domain=$FREEMYIP_DOMAIN"
+}
+
+source "$HOME/.env"
+
+FILENAME="ddns-last-ip.txt"
+FILE="${XDG_STATE_HOME:-$HOME/.local/state}/$FILENAME"
+
+CURRENT_IP=$(curl -4 -s https://checkip.amazonaws.com)
+
+if [ ! -f "$FILE" ]; then
+    mkdir -p "$(dirname $FILE)"
+    echo "$CURRENT_IP" > "$FILE"
+    echo "Initialized file with current ip address."
+    update
+else
+    PREVIOUS_IP=$(cat "$FILE")
+
+    if [ "$CURRENT_IP" = "$PREVIOUS_IP" ]; then
+        echo "IP address is the same as last time."
+    else
+        echo "IP address changed. Updating file..."
+        echo "$CURRENT_IP" > "$FILE"
+        update
+    fi
+fi
