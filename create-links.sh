@@ -4,8 +4,11 @@ rm -f /home/$USER/.profile
 ln -s $REPO_DIR/.profile /home/$USER/.profile
 
 # Bash
-rm -f /home/$USER/.bashrc
-ln -s $REPO_DIR/.bashrc /home/$USER/.bashrc
+rm -f $HOME/.bash_profile
+ln -s $REPO_DIR/.bash_profile $HOME/.bash_profile
+
+rm -f $HOME/.bashrc
+ln -s $REPO_DIR/.bashrc $HOME/.bashrc
 
 # .config
 mkdir -p $HOME/.config/ashell
